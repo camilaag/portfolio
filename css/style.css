@@ -814,6 +814,7 @@ a { color: inherit; text-decoration: none; }
   /* iFood case study */
   .initiative-grid { grid-template-columns: 1fr; }
   .journey-split   { grid-template-columns: 1fr; }
+  .journey-types   { grid-template-columns: 1fr; }
   .result-stats    { grid-template-columns: 1fr; }
   .problem-metrics { gap: 24px; }
   .csat-display    { flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -823,3 +824,45 @@ a { color: inherit; text-decoration: none; }
   .journey-outcome-item:last-child { border-bottom: none; }
   .ifood-section   { padding: 56px 0; }
 }
+
+/* Journey "before" context block */
+.journey-before {
+  padding: 20px 24px;
+  background: var(--surface-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-xl);
+  margin-bottom: 4px;
+}
+.journey-before-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted-soft); margin-bottom: 12px;
+}
+.journey-before-flow {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.journey-before-step {
+  padding: 7px 14px;
+  background: var(--surface-card); border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  font-size: 13px; color: var(--muted); font-weight: 500;
+}
+.journey-before-arrow { font-size: 14px; color: var(--muted-soft); }
+.journey-before-note {
+  font-size: 13px; color: var(--muted-soft); margin-top: 10px; font-style: italic;
+}
+
+/* Journey edit-type cards */
+.journey-types {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 4px;
+}
+.journey-type {
+  padding: 14px 16px;
+  background: var(--canvas); border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.journey-type-label {
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  display: flex; align-items: center; gap: 7px;
+}
+.journey-type-sub { font-size: 12px; color: var(--muted); }

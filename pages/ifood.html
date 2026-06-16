@@ -70,7 +70,7 @@
         <div class="yt-wrap">
           <iframe
             src="https://www.youtube.com/embed/x2wmoO5xkQI"
-            title="iFood Shop &mdash; apresentacao do produto"
+            title="iFood Shop &mdash; apresenta&ccedil;&atilde;o do produto"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
@@ -83,130 +83,11 @@
     </div>
   </section>
 
-  <!-- ─── PM JR: Logística & Pós-venda ─── -->
-  <section class="ifood-section ifood-section-alt">
-    <div class="container">
-      <div class="ifood-section-inner">
-        <p class="phase-chip">PM J&uacute;nior &middot; 2021 &ndash; 2022</p>
-        <h2 class="ifood-section-title">Log&iacute;stica &amp; P&oacute;s-venda</h2>
-        <p class="ifood-section-body">
-          Minha primeira posi&ccedil;&atilde;o como PM foi no squad de p&oacute;s-venda e log&iacute;stica do
-          iFood Shop. O desafio central era <strong>expandir a base de fornecedores sem frota
-          pr&oacute;pria</strong> e melhorar a experi&ecirc;ncia de entrega de ponta a ponta.
-          Tr&ecirc;s frentes principais:
-        </p>
-
-        <div class="initiative-grid">
-
-          <div class="initiative-card">
-            <div class="initiative-icon">🚚</div>
-            <p class="initiative-title">Log&iacute;stica como Servi&ccedil;o (LaaS)</p>
-            <p class="initiative-desc">
-              Integra&ccedil;&atilde;o de transportadoras terceiras ao ecossistema do Shop, abrindo portas
-              para fornecedores sem frota pr&oacute;pria. Solu&ccedil;&atilde;o escal&aacute;vel e replic&aacute;vel
-              para o marketplace.
-            </p>
-            <a href="https://blog-parceiros.ifood.com.br/logistica-integrada/" target="_blank" rel="noopener" class="initiative-link">
-              Ver publica&ccedil;&atilde;o &rarr;
-            </a>
-          </div>
-
-          <div class="initiative-card">
-            <div class="initiative-icon">📅</div>
-            <p class="initiative-title">Agendamento de Entregas</p>
-            <p class="initiative-desc">
-              Feature que permitia restaurantes planejarem recebimentos com anteced&ecirc;ncia
-              &mdash; menos imprevistos na opera&ccedil;&atilde;o e mais controle sobre o fluxo de estoque.
-            </p>
-          </div>
-
-          <div class="initiative-card">
-            <div class="initiative-icon">💬</div>
-            <p class="initiative-title">Fluxo de Comunica&ccedil;&atilde;o</p>
-            <p class="initiative-desc">
-              Estrutura&ccedil;&atilde;o do fluxo de comunica&ccedil;&atilde;o p&oacute;s-compra via
-              <strong>e-mail e WhatsApp</strong>, mantendo fornecedores e compradores alinhados
-              ao longo de toda a jornada de entrega.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PM PLENO: Edição de Pedidos / Ruptura ─── -->
-  <section class="ifood-section">
-    <div class="container">
-      <div class="ifood-section-inner">
-        <p class="phase-chip">PM Pleno &middot; 2022</p>
-        <h2 class="ifood-section-title">Edi&ccedil;&atilde;o de Pedidos &amp;<br>Ruptura Automatizada</h2>
-        <p class="ifood-section-body">
-          No squad de Admin para Fornecedores, o foco era dar <strong>autonomia operacional
-          aos fornecedores</strong> do Shop. O maior projeto foi a funcionalidade de
-          <strong>edi&ccedil;&atilde;o de pedidos com gest&atilde;o de ruptura</strong>: quando um item falta,
-          o sistema precisa calcular e processar o estorno automaticamente &mdash; sem
-          interven&ccedil;&atilde;o manual e sem gerar chamados.
-        </p>
-
-        <!-- Journey: ruptura flow -->
-        <div class="journey-wrap">
-
-          <div class="journey-node">
-            <p class="journey-node-tag">Gatilho</p>
-            <p class="journey-node-title">Fornecedor registra ruptura no pedido</p>
-            <p class="journey-node-sub">Item indispon&iacute;vel ou estoque zerado na hora da separa&ccedil;&atilde;o</p>
-          </div>
-
-          <div class="journey-arrow">&darr;</div>
-
-          <div class="journey-node">
-            <p class="journey-node-tag">Processamento autom&aacute;tico</p>
-            <p class="journey-node-title">Sistema calcula o estorno pelo m&eacute;todo de pagamento</p>
-            <p class="journey-node-sub">L&oacute;gica diferente para cada forma de pagamento &mdash; sem interven&ccedil;&atilde;o manual</p>
-          </div>
-
-          <div class="journey-arrow">&darr;</div>
-
-          <div class="journey-split">
-            <div class="journey-branch">
-              <p class="journey-branch-method">💳 Cart&atilde;o de cr&eacute;dito</p>
-              <p class="journey-branch-action">Novo pr&eacute;-aprovado gerado na mesma sess&atilde;o</p>
-            </div>
-            <div class="journey-branch">
-              <p class="journey-branch-method">📲 PIX</p>
-              <p class="journey-branch-action">Estorno instant&acirc;neo para a chave de origem</p>
-            </div>
-            <div class="journey-branch">
-              <p class="journey-branch-method">🧾 Boleto a prazo</p>
-              <p class="journey-branch-action">Novo boleto emitido com valor ajustado</p>
-            </div>
-          </div>
-
-          <div class="journey-arrow">&darr;</div>
-
-          <div class="journey-outcome-bar">
-            <div class="journey-outcome-item">
-              📦 <span>Restaurante notificado automaticamente</span>
-            </div>
-            <div class="journey-outcome-item">
-              🔔 <span>Cliente informado sobre a altera&ccedil;&atilde;o</span>
-            </div>
-            <div class="journey-outcome-item">
-              📉 <span>Chamados para suporte reduzidos</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ─── PM SENIOR: Checkout iFood Shop ─── -->
   <section class="ifood-section ifood-section-alt">
     <div class="container">
       <div class="ifood-section-inner">
-        <p class="phase-chip">PM Senior &middot; 2022 &ndash; 2024</p>
+        <p class="phase-chip">PM Senior &middot; iFood Shop &middot; 2022 &ndash; 2024</p>
         <h2 class="ifood-section-title">Refatora&ccedil;&atilde;o do Carrinho &amp; Checkout</h2>
         <p class="ifood-section-body">
           No squad de Experi&ecirc;ncia de Checkout, o diagn&oacute;stico foi claro desde o in&iacute;cio:
@@ -268,10 +149,10 @@
   <section class="ifood-section">
     <div class="container">
       <div class="ifood-section-inner">
-        <p class="phase-chip">PM Senior &middot; 2022</p>
+        <p class="phase-chip">PM Senior &middot; Portal do Parceiro &middot; 2022</p>
         <h2 class="ifood-section-title">Portal do Parceiro:<br>Experi&ecirc;ncia de Performance</h2>
         <p class="ifood-section-body">
-          Em paralelo ao iFood Shop, liderei o squad de <strong>Experi&ecirc;ncia de Performance para
+          Ainda em 2022, atuei no squad de <strong>Experi&ecirc;ncia de Performance para
           Restaurantes</strong> no Portal do Parceiro &mdash; a plataforma B2B onde mais de
           <strong>350 mil restaurantes</strong> gerenciam seu neg&oacute;cio dentro do iFood.
           O foco era transformar dados de performance em informa&ccedil;&atilde;o clara e acion&aacute;vel
@@ -307,6 +188,160 @@
     </div>
   </section>
 
+  <!-- ─── PM PLENO: Edição de Pedidos / Ruptura ─── -->
+  <section class="ifood-section ifood-section-alt">
+    <div class="container">
+      <div class="ifood-section-inner">
+        <p class="phase-chip">PM Pleno &middot; iFood Shop &middot; 2022</p>
+        <h2 class="ifood-section-title">Edi&ccedil;&atilde;o de Pedidos &amp; Ruptura</h2>
+        <p class="ifood-section-body">
+          No squad de Admin para Fornecedores, o foco era dar <strong>autonomia operacional
+          aos fornecedores</strong> do Shop. Antes dessa funcionalidade, qualquer ajuste em
+          um pedido &mdash; item em falta, quantidade errada ou cancelamento &mdash; exigia
+          que o fornecedor contatasse o suporte do iFood, que ent&atilde;o entrava em contato
+          manualmente com o restaurante comprador.
+        </p>
+
+        <!-- Journey: edição de pedidos -->
+        <div class="journey-wrap">
+
+          <!-- ANTES -->
+          <div class="journey-before">
+            <p class="journey-before-label">Antes da feature</p>
+            <div class="journey-before-flow">
+              <div class="journey-before-step">Fornecedor detecta problema</div>
+              <span class="journey-before-arrow">&rarr;</span>
+              <div class="journey-before-step">Liga / envia e-mail para o suporte</div>
+              <span class="journey-before-arrow">&rarr;</span>
+              <div class="journey-before-step">Suporte contata o restaurante</div>
+              <span class="journey-before-arrow">&rarr;</span>
+              <div class="journey-before-step">Estorno manual</div>
+            </div>
+            <p class="journey-before-note">Processo lento, dependente de terceiros e gerador de chamados.</p>
+          </div>
+
+          <div class="journey-arrow">&darr;</div>
+
+          <!-- TIPO DE EDIÇÃO -->
+          <div class="journey-node">
+            <p class="journey-node-tag">O que mudou</p>
+            <p class="journey-node-title">Fornecedor edita o pedido diretamente na plataforma</p>
+            <p class="journey-node-sub">Tr&ecirc;s tipos de edi&ccedil;&atilde;o dispon&iacute;veis</p>
+          </div>
+
+          <div class="journey-arrow">&darr;</div>
+
+          <div class="journey-types">
+            <div class="journey-type">
+              <p class="journey-type-label">🚫 Ruptura total</p>
+              <p class="journey-type-sub">Item completamente indispon&iacute;vel no estoque</p>
+            </div>
+            <div class="journey-type">
+              <p class="journey-type-label">📦 Redu&ccedil;&atilde;o de quantidade</p>
+              <p class="journey-type-sub">Pediu 10, tem s&oacute; 6 &mdash; ajuste parcial</p>
+            </div>
+            <div class="journey-type">
+              <p class="journey-type-label">❌ Cancelamento total</p>
+              <p class="journey-type-sub">Pedido inteiro indispon&iacute;vel para entrega</p>
+            </div>
+          </div>
+
+          <div class="journey-arrow">&darr;</div>
+
+          <div class="journey-node">
+            <p class="journey-node-tag">Processamento autom&aacute;tico</p>
+            <p class="journey-node-title">Sistema calcula e processa o estorno por m&eacute;todo de pagamento</p>
+            <p class="journey-node-sub">L&oacute;gica espec&iacute;fica para cada forma &mdash; sem interven&ccedil;&atilde;o manual</p>
+          </div>
+
+          <div class="journey-arrow">&darr;</div>
+
+          <div class="journey-split">
+            <div class="journey-branch">
+              <p class="journey-branch-method">💳 Cart&atilde;o de cr&eacute;dito</p>
+              <p class="journey-branch-action">Novo pr&eacute;-aprovado gerado na mesma sess&atilde;o</p>
+            </div>
+            <div class="journey-branch">
+              <p class="journey-branch-method">📲 PIX</p>
+              <p class="journey-branch-action">Estorno instant&acirc;neo para a chave de origem</p>
+            </div>
+            <div class="journey-branch">
+              <p class="journey-branch-method">🧾 Boleto a prazo</p>
+              <p class="journey-branch-action">Novo boleto emitido com valor ajustado</p>
+            </div>
+          </div>
+
+          <div class="journey-arrow">&darr;</div>
+
+          <div class="journey-outcome-bar">
+            <div class="journey-outcome-item">
+              🔔 <span>Restaurante notificado automaticamente</span>
+            </div>
+            <div class="journey-outcome-item">
+              🔕 <span>Suporte fora do loop</span>
+            </div>
+            <div class="journey-outcome-item">
+              📉 <span>Chamados de suporte reduzidos</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PM JR: Logística & Pós-venda ─── -->
+  <section class="ifood-section">
+    <div class="container">
+      <div class="ifood-section-inner">
+        <p class="phase-chip">PM J&uacute;nior &middot; iFood Shop &middot; 2021 &ndash; 2022</p>
+        <h2 class="ifood-section-title">Log&iacute;stica &amp; P&oacute;s-venda</h2>
+        <p class="ifood-section-body">
+          Minha primeira posi&ccedil;&atilde;o como PM foi no squad de p&oacute;s-venda e log&iacute;stica do
+          iFood Shop. O desafio central era <strong>expandir a base de fornecedores sem frota
+          pr&oacute;pria</strong> e melhorar a experi&ecirc;ncia de entrega de ponta a ponta.
+          Tr&ecirc;s frentes principais:
+        </p>
+
+        <div class="initiative-grid">
+
+          <div class="initiative-card">
+            <div class="initiative-icon">🚚</div>
+            <p class="initiative-title">Log&iacute;stica como Servi&ccedil;o (LaaS)</p>
+            <p class="initiative-desc">
+              Integra&ccedil;&atilde;o de transportadoras terceiras ao ecossistema do Shop, abrindo portas
+              para fornecedores sem frota pr&oacute;pria. Solu&ccedil;&atilde;o escal&aacute;vel e replic&aacute;vel
+              para o marketplace.
+            </p>
+            <a href="https://blog-parceiros.ifood.com.br/logistica-integrada/" target="_blank" rel="noopener" class="initiative-link">
+              Ver publica&ccedil;&atilde;o &rarr;
+            </a>
+          </div>
+
+          <div class="initiative-card">
+            <div class="initiative-icon">📅</div>
+            <p class="initiative-title">Agendamento de Entregas</p>
+            <p class="initiative-desc">
+              Feature que permitia restaurantes planejarem recebimentos com anteced&ecirc;ncia
+              &mdash; menos imprevistos na opera&ccedil;&atilde;o e mais controle sobre o fluxo de estoque.
+            </p>
+          </div>
+
+          <div class="initiative-card">
+            <div class="initiative-icon">💬</div>
+            <p class="initiative-title">Fluxo de Comunica&ccedil;&atilde;o</p>
+            <p class="initiative-desc">
+              Estrutura&ccedil;&atilde;o do fluxo de comunica&ccedil;&atilde;o p&oacute;s-compra via
+              <strong>e-mail e WhatsApp</strong>, mantendo fornecedores e compradores alinhados
+              ao longo de toda a jornada de entrega.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── ORIGEM: Eng Jr ─── -->
   <section class="ifood-section ifood-section-alt">
     <div class="container">
@@ -333,7 +368,7 @@
   <!-- ─── navigation ─── -->
   <div style="max-width:820px; margin:0 auto; padding:0 32px;">
     <div class="exp-nav">
-      <a href="boticario.html" class="exp-nav-link">&larr; Grupo Boticario</a>
+      <a href="boticario.html" class="exp-nav-link">&larr; Grupo Boticário</a>
       <a href="early-career.html" class="exp-nav-link">Engenharia &amp; Pesquisa &rarr;</a>
     </div>
   </div>
