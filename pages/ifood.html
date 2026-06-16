@@ -187,14 +187,15 @@
         <p class="phase-chip">PM Senior &middot; iFood Shop &middot; 2022 &ndash; 2024</p>
         <h2 class="ifood-section-title">Refatora&ccedil;&atilde;o do Carrinho &amp; Checkout</h2>
         <p class="ifood-section-body">
-          No squad de Experi&ecirc;ncia de Checkout, o diagn&oacute;stico foi claro desde o in&iacute;cio:
-          a convers&atilde;o no app estava <strong>muito abaixo do potencial</strong>.
-          A grande maioria dos usu&aacute;rios que adicionava produtos ao carrinho n&atilde;o chegava
-          ao fim do pedido &mdash; e o gap em rela&ccedil;&atilde;o &agrave; web era expressivo.
+          O iFood Shop herdou o carrinho do app do iFood consumidor &mdash; que funciona bem para
+          pedir uma pizza, mas n&atilde;o para o comportamento B2B.
+          <strong>Restaurantes pesquisam, comparam pre&ccedil;os entre fornecedores e montam
+          o carrinho gradualmente.</strong> O funil mostrava que esse desalinhamento estava
+          custando caro em convers&atilde;o.
         </p>
 
         <div class="problem-block">
-          <p class="problem-block-label">O problema &middot; antes da refatora&ccedil;&atilde;o</p>
+          <p class="problem-block-label">O diagn&oacute;stico &middot; antes da refatora&ccedil;&atilde;o</p>
           <div class="problem-metrics">
             <div class="problem-metric">
               <span class="problem-metric-value">5,6%</span>
@@ -211,12 +212,45 @@
           </div>
         </div>
 
-        <p class="ifood-section-body" style="margin-bottom:0;">
-          A descoberta combinou an&aacute;lise de funil, pesquisa qualitativa com usu&aacute;rios
-          e o framework <strong>Triple Diamond</strong> para mapear os gatilhos comportamentais
-          de abandono. A refatora&ccedil;&atilde;o abrangeu arquitetura de informa&ccedil;&atilde;o do carrinho,
-          fluxo de confirma&ccedil;&atilde;o de pedido e comunica&ccedil;&atilde;o de erros.
-        </p>
+        <p class="edu-subsection-label" style="margin-bottom:4px; margin-top:32px;">O que a pesquisa revelou</p>
+        <div class="journey-types">
+          <div class="journey-type">
+            <p class="journey-type-label">🛒 Carrinho que esvaziava</p>
+            <p class="journey-type-sub">Ao trocar de fornecedor, todos os itens sumiam &mdash; comportamento do app do consumidor que n&atilde;o faz sentido no B2B</p>
+          </div>
+          <div class="journey-type">
+            <p class="journey-type-label">🐛 Bugs que travavam o fluxo</p>
+            <p class="journey-type-sub">Teclado que subia e n&atilde;o fechava mais, bloqueando o usu&aacute;rio no meio da jornada</p>
+          </div>
+          <div class="journey-type">
+            <p class="journey-type-label">🔄 Etapas na ordem errada</p>
+            <p class="journey-type-sub">Pagamento vinha antes de entrega &mdash; mas o frete altera o valor final, for&ccedil;ando o usu&aacute;rio a voltar e revisar</p>
+          </div>
+        </div>
+
+        <p class="edu-subsection-label" style="margin-bottom:4px; margin-top:32px;">O que foi constru&iacute;do</p>
+        <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="feature-card">
+            <div class="feature-card-icon">🛒</div>
+            <p class="feature-card-title">Carrinho multi-seller</p>
+            <p class="feature-card-desc">Restaurantes adicionam itens de m&uacute;ltiplos fornecedores e fecham um pedido por vez</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">🔄</div>
+            <p class="feature-card-title">Fluxo invertido: entrega &rarr; pagamento</p>
+            <p class="feature-card-desc">O usu&aacute;rio v&ecirc; o valor final com frete antes de escolher o m&eacute;todo de pagamento</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">🎨</div>
+            <p class="feature-card-title">Redesign do carrinho</p>
+            <p class="feature-card-desc">Nova hierarquia visual, resumo claro do pedido e arquitetura de informa&ccedil;&atilde;o revisada</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card-icon">🛠️</div>
+            <p class="feature-card-title">Corre&ccedil;&atilde;o de bugs e feedback</p>
+            <p class="feature-card-desc">Elimina&ccedil;&atilde;o dos erros que quebravam o fluxo e melhoria das mensagens de erro</p>
+          </div>
+        </div>
 
         <div class="result-stats">
           <div class="result-stat">
