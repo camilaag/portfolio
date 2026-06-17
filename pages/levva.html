@@ -16,6 +16,9 @@
       <a href="../index.html" class="nav-logo">
         <img src="../images/logo.svg" alt="Camila Gomes" height="28">
       </a>
+      <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="../index.html#sobre">Sobre</a></li>
         <li><a href="../index.html#expertise">Expertise</a></li>
@@ -102,5 +105,19 @@
     </div>
   </footer>
 
+<script>
+  var nav = document.querySelector('.nav');
+  var btn = document.querySelector('.nav-hamburger');
+  btn.addEventListener('click', function() {
+    var open = nav.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      nav.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
 </body>
 </html>
