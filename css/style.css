@@ -266,6 +266,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 32px; font-weight: 500; color: var(--ink);
   letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 6px;
 }
+.exp-card-bold-hook { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 10px; line-height: 1.5; }
 .exp-card-bold-role { font-size: 15px; color: var(--muted); font-weight: 500; margin-bottom: 3px; }
 .exp-card-bold-period { font-size: 13px; color: var(--muted-soft); }
 
@@ -930,3 +931,102 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; gap: 7px;
 }
 .journey-type-sub { font-size: 12px; color: var(--muted); }
+
+/* =========================================
+   APPROACH
+========================================= */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.approach-card {
+  padding: 36px 32px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-xl);
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+.approach-number {
+  font-size: 12px; font-weight: 700; letter-spacing: 2px;
+  color: var(--muted-soft);
+}
+
+.approach-title {
+  font-size: 18px; font-weight: 600; color: var(--ink);
+  letter-spacing: -0.3px; line-height: 1.3;
+}
+
+.approach-desc {
+  font-size: 15px; color: var(--body); line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .approach-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.testimonial-card {
+  padding: 32px 28px;
+  background: var(--canvas);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-xl);
+  display: flex; flex-direction: column; justify-content: space-between;
+  gap: 24px;
+}
+
+.testimonial-quote {
+  font-size: 15px; color: var(--body); line-height: 1.75;
+  font-style: normal;
+}
+
+.testimonial-author {
+  font-size: 13px; font-weight: 600; color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   FAQ
+========================================= */
+.faq-list { display: flex; flex-direction: column; max-width: 720px; }
+
+.faq-item {
+  border-bottom: 1px solid var(--hairline);
+}
+.faq-item:first-child { border-top: 1px solid var(--hairline); }
+
+.faq-question {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 0;
+  font-size: 16px; font-weight: 600; color: var(--ink);
+  cursor: pointer; list-style: none; gap: 16px;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+  content: '+';
+  font-size: 20px; font-weight: 400; color: var(--muted-soft);
+  flex-shrink: 0; transition: transform .2s;
+}
+details[open] .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  font-size: 15px; color: var(--body); line-height: 1.7;
+  padding-bottom: 22px; max-width: 640px;
+}
+.faq-answer a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.faq-answer a:hover { color: var(--muted); }
