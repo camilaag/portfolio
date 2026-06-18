@@ -230,17 +230,18 @@ a { color: inherit; text-decoration: none; }
 /* =========================================
    ABOUT
 ========================================= */
-.about-layout {
-  display: flex; flex-direction: column; gap: 32px;
+.about-text {
+  max-width: 720px; overflow: hidden;
 }
-.about-dogs {
-  display: flex; flex-direction: row; gap: 12px;
+.about-dogs-float {
+  display: flex; flex-direction: row; gap: 10px;
+  margin-bottom: 16px;
 }
 .about-dog-img {
-  width: 120px; height: 120px;
+  width: 100px; height: 100px;
   object-fit: cover; object-position: center;
   border-radius: var(--r-xl);
-  flex-shrink: 0;
+  display: block;
 }
 .about-text p {
   font-size: 16px; color: var(--body); line-height: 1.7; margin-bottom: 18px;
@@ -940,9 +941,8 @@ a { color: inherit; text-decoration: none; }
   }
   .exp-card-bold-content { padding: 36px 40px; border-left: 1px solid var(--hairline); border-top: none; }
   .edu-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
-  .about-layout { flex-direction: row; align-items: flex-start; gap: 48px; }
-  .about-dogs { flex-direction: column; gap: 12px; flex-shrink: 0; }
-  .about-dog-img { width: 160px; height: 160px; }
+  .about-dogs-float { float: right; flex-direction: column; margin: 4px 0 16px 28px; }
+  .about-dog-img { width: 130px; height: 130px; }
   .nav-inner { padding: 0 32px; }
   .footer-inner { flex-direction: row; text-align: left; justify-content: space-between; padding: 0 32px; }
   .footer-links { flex-direction: row; align-items: center; gap: 24px; }
