@@ -15,8 +15,16 @@
       '</button>' +
       '<ul class="nav-links">' +
         '<li><a href="' + homePrefix + '#sobre">Sobre</a></li>' +
+        '<li class="nav-item-has-dropdown">' +
+          '<a href="' + homePrefix + '#experiencia">Experiência</a>' +
+          '<ul class="nav-dropdown">' +
+            '<li><a href="' + base + 'pages/levva.html">levva @ B3</a></li>' +
+            '<li><a href="' + base + 'pages/boticario.html">Grupo Boticário</a></li>' +
+            '<li><a href="' + base + 'pages/ifood.html">iFood</a></li>' +
+            '<li><a href="' + base + 'pages/early-career.html">Engenharia &amp; Pesquisa</a></li>' +
+          '</ul>' +
+        '</li>' +
         '<li><a href="' + homePrefix + '#expertise">Expertise</a></li>' +
-        '<li><a href="' + homePrefix + '#experiencia">Experiência</a></li>' +
         '<li><a href="' + homePrefix + '#formacao">Formação</a></li>' +
         '<li><a href="' + homePrefix + '#approach">Como trabalho</a></li>' +
         '<li><a href="' + homePrefix + '#faq">FAQ</a></li>' +
