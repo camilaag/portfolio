@@ -113,11 +113,12 @@ a { color: inherit; text-decoration: none; }
 .hero-inner {
   width: 100%; max-width: var(--max-w); margin: 0 auto;
   padding: 32px 16px 40px;
+  display: flex; flex-direction: column;
 }
 .hero-content { position: relative; }
-.hero-photo { margin-top: 32px; }
+.hero-photo { order: -1; margin-bottom: 24px; }
 .hero-photo-img {
-  width: 120px; height: 120px;
+  width: 80px; height: 80px;
   object-fit: cover; object-position: top center;
   border-radius: 50%;
   display: block;
@@ -868,11 +869,8 @@ a { color: inherit; text-decoration: none; }
   }
   .hero-name { letter-spacing: -2.5px; }
   .hero-stats { display: flex; gap: 48px; }
-  .hero-photo { margin-top: 0; }
-  .hero-photo-img {
-    width: 100%; height: auto;
-    border-radius: var(--r-xl);
-  }
+  .hero-photo { order: 0; margin-bottom: 0; }
+  .hero-photo-img { width: 100%; height: auto; border-radius: var(--r-xl); }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .exp-card-bold { flex-direction: row; }
   .exp-card-bold-logo {
