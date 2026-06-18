@@ -357,6 +357,14 @@ a { color: inherit; text-decoration: none; }
 [data-company="ifood"]     .exp-badge { background: #fde8e8; color: #c0101e; }
 [data-company="early"]     .exp-badge { background: #fce9c8; color: #a06008; }
 
+/* Context tags */
+.exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.exp-tag {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+  padding: 3px 10px; border-radius: var(--r-pill);
+  background: var(--surface-strong); color: var(--muted);
+}
+
 /* Bullet dots per company */
 [data-company="levva"]     .exp-highlights li::before { background: #002c63; }
 [data-company="boticario"] .exp-highlights li::before { background: #7a9e8c; }
