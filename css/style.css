@@ -244,18 +244,15 @@ a { color: inherit; text-decoration: none; }
 /* =========================================
    ABOUT
 ========================================= */
-.about-text {
-  max-width: 720px; overflow: hidden;
+.about-layout {
+  display: flex; flex-direction: column; gap: 32px; align-items: flex-start;
 }
-.about-dogs-float {
-  display: flex; flex-direction: row; gap: 10px;
-  margin-bottom: 16px;
-}
-.about-dog-img {
-  width: 100px; height: 100px;
-  object-fit: cover; object-position: center;
+.about-text { flex: 1; min-width: 0; }
+.about-video {
+  width: 100%; max-width: 320px;
   border-radius: var(--r-xl);
-  display: block;
+  display: block; object-fit: cover;
+  align-self: flex-start;
 }
 .about-text p {
   font-size: 16px; color: var(--body); line-height: 1.7; margin-bottom: 18px;
@@ -956,8 +953,8 @@ a { color: inherit; text-decoration: none; }
   }
   .exp-card-bold-content { padding: 36px 40px; border-left: 1px solid var(--hairline); border-top: none; }
   .edu-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
-  .about-dogs-float { float: right; flex-direction: column; margin: 4px 0 16px 28px; }
-  .about-dog-img { width: 130px; height: 130px; }
+  .about-layout { flex-direction: row; align-items: flex-start; gap: 56px; }
+  .about-video { width: 300px; flex-shrink: 0; max-width: none; }
   .nav-inner { padding: 0 32px; }
   .footer-inner { flex-direction: row; text-align: left; justify-content: space-between; padding: 0 32px; }
   .footer-links { flex-direction: row; align-items: center; gap: 24px; }
