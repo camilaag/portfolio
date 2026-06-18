@@ -1078,23 +1078,35 @@ a { color: inherit; text-decoration: none; }
   gap: 16px;
 }
 
-.testimonial-card {
-  padding: 32px 28px;
-  background: var(--canvas);
-  border: 1px solid var(--hairline);
-  border-radius: var(--r-xl);
-  display: flex; flex-direction: column; justify-content: space-between;
-  gap: 24px;
+/* LinkedIn-style testimonial cards */
+.li-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--r-lg);
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
-
-.testimonial-quote {
-  font-size: 15px; color: var(--body); line-height: 1.75;
-  font-style: normal;
+.li-card-header {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 14px;
 }
-
-.testimonial-author {
-  font-size: 13px; font-weight: 600; color: var(--muted);
+.li-avatar {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 0;
 }
+.li-author-info { flex: 1; min-width: 0; }
+.li-author-name { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 2px; }
+.li-author-meta { font-size: 13px; color: #666; }
+.li-degree { color: #0a66c2; font-weight: 600; }
+.li-logo {
+  width: 26px; height: 26px; border-radius: 4px;
+  background: #0a66c2; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 800; font-family: 'Georgia', serif;
+  flex-shrink: 0; letter-spacing: -1px;
+}
+.li-text { font-size: 14px; color: #333; line-height: 1.65; }
 
 
 /* =========================================
