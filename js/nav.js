@@ -26,7 +26,6 @@
         '</li>' +
         '<li><a href="' + homePrefix + '#expertise">Expertise</a></li>' +
         '<li><a href="' + homePrefix + '#formacao">Formação</a></li>' +
-        '<li><a href="' + homePrefix + '#approach">Como trabalho</a></li>' +
         '<li><a href="' + homePrefix + '#faq">FAQ</a></li>' +
         '<li><a href="https://www.linkedin.com/in/camila-a-gomes" target="_blank" rel="noopener">Contato</a></li>' +
       '</ul>' +
