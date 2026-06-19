@@ -313,19 +313,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 .exp-card-bold-logo {
-  width: 100%;
-  height: 96px;
-  flex-shrink: 0;
+  width: 100%; height: 56px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  padding: 20px 32px;
-}
-
-.exp-logo-img {
-  max-height: 40px;
-  max-width: 140px;
-  width: auto; height: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  writing-mode: horizontal-tb; transform: none;
 }
 
 .exp-card-bold-content {
@@ -882,32 +873,6 @@ a { color: inherit; text-decoration: none; }
 .csat-meta-desc strong { color: var(--body-strong); font-weight: 600; }
 
 /* =========================================
-   MARQUEE TICKER
-========================================= */
-.marquee-section {
-  background: var(--ink);
-  padding: 16px 0;
-  overflow: hidden;
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 40s linear infinite;
-}
-.marquee-text {
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(255,255,255,.55);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* =========================================
    ANIMATIONS
 ========================================= */
 @keyframes fadeInUp {
@@ -980,14 +945,9 @@ a { color: inherit; text-decoration: none; }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .exp-card-bold { flex-direction: row; }
   .exp-card-bold-logo {
-    width: 160px; height: auto;
-    writing-mode: horizontal-tb;
-    transform: none;
-    padding: 48px 28px;
-  }
-  .exp-logo-img {
-    max-height: 48px;
-    max-width: 110px;
+    width: 104px; height: auto;
+    writing-mode: vertical-lr; text-orientation: mixed;
+    transform: rotate(180deg); font-size: 12px; letter-spacing: 1.5px;
   }
   .exp-card-bold-content { padding: 36px 40px; border-left: 1px solid var(--hairline); border-top: none; }
   .edu-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
