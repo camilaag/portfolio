@@ -70,7 +70,7 @@ a { color: inherit; text-decoration: none; }
 ========================================= */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 16px; }
 .section    { padding: var(--section-pad) 0; }
-.section-alt { background: var(--surface-soft); }
+.section-alt { background: transparent; }
 
 /* =========================================
    NAVIGATION
@@ -92,7 +92,7 @@ a { color: inherit; text-decoration: none; }
 .nav-logo span { color: var(--muted); font-weight: 500; }
 .nav-links { display: flex; gap: 4px; list-style: none; }
 .nav-links a {
-  color: var(--muted); font-size: 14px; font-weight: 500;
+  color: var(--ink); font-size: 14px; font-weight: 600;
   padding: 6px 14px; border-radius: var(--r-pill);
   transition: color .15s, background .15s;
 }
@@ -251,10 +251,10 @@ a { color: inherit; text-decoration: none; }
 .about-video {
   display: none;
 }
-.about-text p {
+.about-text > p {
   font-size: 16px; color: var(--body); line-height: 1.7; margin-bottom: 18px;
 }
-.about-text p:last-child { margin-bottom: 0; }
+.about-text > p:last-child { margin-bottom: 0; }
 .about-text strong { color: var(--body-strong); font-weight: 600; }
 
 /* =========================================
@@ -297,100 +297,147 @@ a { color: inherit; text-decoration: none; }
 .expertise-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
 /* =========================================
-   EXPERIENCE CARDS — vertical bold stack
+   EXPERIENCE CARDS
 ========================================= */
-.exp-stack { display: flex; flex-direction: column; gap: 16px; }
+.exp-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
 .exp-card-bold {
-  display: flex; flex-direction: column; align-items: stretch;
-  background: var(--canvas); border: 1px solid var(--hairline);
+  display: flex; flex-direction: column;
   border-radius: var(--r-xl); overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
+  transition: transform .2s, box-shadow .2s, background .2s;
   color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
 .exp-card-bold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(0,0,0,.08);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
 }
 
-.exp-card-bold-logo {
-  width: 100%; height: 56px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  writing-mode: horizontal-tb; transform: none;
+/* hover: sombra tintada + leve escurecida no background */
+[data-company="levva"]:hover     { background: #ccd5f2; box-shadow: 0 16px 40px rgba(0,51,102,.18); }
+[data-company="boticario"]:hover { background: #c2e3d2; box-shadow: 0 16px 40px rgba(0,112,60,.18); }
+[data-company="ifood"]:hover     { background: #f8c8cc; box-shadow: 0 16px 40px rgba(234,29,44,.18); }
+[data-company="early"]:hover     { background: #fde4c0; box-shadow: 0 16px 40px rgba(232,66,26,.18); }
+
+.exp-card-body {
+  flex: 1; padding: 20px;
+  display: flex; flex-direction: column;
 }
 
-.exp-card-bold-content {
-  flex: 1; padding: 24px;
-  border-left: none; border-top: 1px solid var(--hairline);
-  display: flex; flex-direction: column; gap: 20px;
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
 
-.exp-card-bold-top {
-  display: flex; justify-content: space-between;
-  align-items: flex-start; gap: 16px;
+.exp-card-logo {
+  height: 22px; width: auto;
+  flex-shrink: 0; object-fit: contain;
 }
 
-.exp-card-bold-company {
-  font-size: clamp(22px, 5.5vw, 32px); font-weight: 500; color: var(--ink);
-  letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 6px;
+.exp-card-company {
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 700; color: var(--ink);
+  letter-spacing: -0.5px; line-height: 1.2;
 }
-.exp-card-bold-hook { font-size: 14px; color: var(--muted); font-style: italic; margin-bottom: 10px; line-height: 1.5; }
-.exp-card-bold-role { font-size: 15px; color: var(--muted); font-weight: 500; margin-bottom: 3px; }
-.exp-card-bold-period { font-size: 13px; color: var(--muted-soft); }
+
+.exp-card-hook {
+  font-size: 13px; color: var(--muted);
+  font-style: italic; line-height: 1.5;
+  margin-top: 14px;
+}
+
+/* wrapper de cargo + período */
+.exp-card-meta { margin-top: 12px; margin-bottom: 10px; }
+
+.exp-card-role {
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  display: block;
+}
+
+.exp-card-period {
+  font-size: 11px; color: var(--muted);
+  display: block; margin-top: 2px;
+}
+
+/* iFood: arc + period standalone */
+.exp-card-arc { margin-top: 12px; }
+.exp-card-arc + .exp-card-period { margin-top: 4px; margin-bottom: 10px; }
+
+/* mini jornada iFood */
+.exp-card-arc {
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+}
+.exp-card-arc-step {
+  font-size: 10px; font-weight: 600; color: var(--muted);
+  padding: 2px 8px; border-radius: 100px;
+  border: 1px solid rgba(0,0,0,.12);
+  white-space: nowrap;
+}
+.exp-card-arc-step--active {
+  color: #8a1020;
+  border-color: rgba(138,16,32,.25);
+  background: rgba(138,16,32,.06);
+}
+.exp-card-arc-gap { font-size: 9px; color: var(--muted); }
+
+.exp-card-list {
+  display: flex; flex-direction: column; gap: 5px;
+  margin: 0; list-style: none;
+  padding: 0 0 0 12px;
+  border-left: 2px solid rgba(0,0,0,.14);
+}
+.exp-card-list li {
+  font-size: 12px; color: var(--body); line-height: 1.45;
+}
+
+/* accent de borda por empresa */
+[data-company="levva"]     .exp-card-list { border-left-color: rgba(0,51,102,.28); }
+[data-company="boticario"] .exp-card-list { border-left-color: rgba(0,112,60,.28); }
+[data-company="ifood"]     .exp-card-list { border-left-color: rgba(234,29,44,.28); }
+[data-company="early"]     .exp-card-list { border-left-color: rgba(232,66,26,.28); }
+
+.exp-card-foot {
+  padding: 10px 20px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  display: flex; justify-content: space-between; align-items: center;
+}
 
 .exp-badge {
   display: inline-flex; align-items: center;
-  padding: 4px 12px; border-radius: var(--r-pill);
-  background: var(--surface-card);
-  font-size: 12px; font-weight: 600;
-  color: var(--muted); white-space: nowrap; flex-shrink: 0;
-}
-
-.exp-highlights { list-style: none; display: flex; flex-direction: column; gap: 0; }
-.exp-highlights li {
-  font-size: 15px; color: var(--body); padding: 9px 0 9px 16px;
-  position: relative; line-height: 1.5;
-  border-bottom: 1px solid var(--hairline-soft);
-}
-.exp-highlights li:last-child { border-bottom: none; }
-.exp-highlights li::before {
-  content: '';
-  position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-  width: 5px; height: 5px; border-radius: 50%;
+  padding: 3px 10px; border-radius: var(--r-pill);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .exp-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 14px; font-weight: 600; color: var(--ink);
-  transition: gap .15s; align-self: flex-end;
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  white-space: nowrap; flex-shrink: 0;
 }
-.exp-link:hover { gap: 10px; }
+.exp-link-label {
+  max-width: 0; overflow: hidden; opacity: 0;
+  font-size: 10px; font-weight: 600;
+  transition: max-width .3s ease, opacity .2s;
+}
+.exp-card-bold:hover .exp-link-label { max-width: 80px; opacity: 1; }
 
-/* Company logo block colors */
-[data-company="levva"]     .exp-card-bold-logo { background: #002c63; color: #fff; }
-[data-company="boticario"] .exp-card-bold-logo { background: #7a9e8c; color: #fff; }
-[data-company="ifood"]     .exp-card-bold-logo { background: #ea1d2c; color: #fff; }
-[data-company="early"]     .exp-card-bold-logo { background: #d4860f; color: #fff; }
+/* Pastel card backgrounds per company — derivados da cor de marca */
+[data-company="levva"]     { background: #dce3f7; }
+[data-company="boticario"] { background: #d4ede0; }
+[data-company="ifood"]     { background: #fcd8db; }
+[data-company="early"]     { background: #feecd0; }
 
 /* Badge colors per company */
-[data-company="levva"]     .exp-badge { background: #d0dff0; color: #002c63; }
-[data-company="boticario"] .exp-badge { background: #daeee7; color: #4a7060; }
-[data-company="ifood"]     .exp-badge { background: #fde8e8; color: #c0101e; }
-[data-company="early"]     .exp-badge { background: #fce9c8; color: #a06008; }
-
-/* Context tags */
-.exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-.exp-tag {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
-  padding: 3px 10px; border-radius: var(--r-pill);
-  background: var(--surface-strong); color: var(--muted);
-}
-
-/* Bullet dots per company */
-[data-company="levva"]     .exp-highlights li::before { background: #002c63; }
-[data-company="boticario"] .exp-highlights li::before { background: #7a9e8c; }
-[data-company="ifood"]     .exp-highlights li::before { background: #ea1d2c; }
-[data-company="early"]     .exp-highlights li::before { background: #d4860f; }
+[data-company="levva"]     .exp-badge { background: rgba(0,51,102,.12);  color: #003366; }
+[data-company="boticario"] .exp-badge { background: rgba(0,112,60,.12);  color: #00703c; }
+[data-company="ifood"]     .exp-badge { background: rgba(234,29,44,.12); color: #c0101e; }
+[data-company="early"]     .exp-badge { background: rgba(232,66,26,.12); color: #b83010; }
 
 /* =========================================
    EDUCATION & CERTS
@@ -943,16 +990,27 @@ a { color: inherit; text-decoration: none; }
   .hero-photo-desktop { display: block; }
   .hero-photo-img { width: 100%; height: auto; border-radius: var(--r-xl); }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
-  .exp-card-bold { flex-direction: row; }
-  .exp-card-bold-logo {
-    width: 104px; height: auto;
-    writing-mode: vertical-lr; text-orientation: mixed;
-    transform: rotate(180deg); font-size: 12px; letter-spacing: 1.5px;
-  }
-  .exp-card-bold-content { padding: 36px 40px; border-left: 1px solid var(--hairline); border-top: none; }
+  .exp-stack { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .exp-card-body { padding: 24px; }
+  .exp-card-logo { height: 28px; max-width: 120px; }
+  .exp-card-company { font-size: 22px; }
+  .exp-card-hook { font-size: 14px; margin-top: 16px; }
+  .exp-card-meta { margin-top: 14px; margin-bottom: 12px; }
+  .exp-card-arc { margin-top: 14px; }
+  .exp-card-arc + .exp-card-period { margin-bottom: 12px; }
+  .exp-card-role { font-size: 14px; }
+  .exp-card-period { font-size: 12px; }
+  .exp-card-arc-step { font-size: 11px; padding: 3px 10px; }
+  .exp-card-list { padding-left: 14px; }
+  .exp-card-list li { font-size: 13px; }
+  .exp-card-foot { padding: 12px 24px; }
+  .exp-badge { font-size: 11px; padding: 4px 12px; }
+  .exp-link { font-size: 14px; }
+  .exp-link-label { font-size: 11px; }
   .edu-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
   .about-layout { flex-direction: row; align-items: flex-start; gap: 56px; }
-  .about-video { display: block; width: 220px; flex-shrink: 0; border-radius: var(--r-xl); object-fit: cover; align-self: flex-start; }
+  .about-video-wrap { width: 220px; flex-shrink: 0; align-self: stretch; border-radius: var(--r-xl); overflow: hidden; }
+  .about-video { display: block; width: 100%; height: 100%; object-fit: cover; }
   .nav-inner { padding: 0 32px; }
   .footer-inner { flex-direction: row; text-align: left; justify-content: space-between; padding: 0 32px; }
   .footer-links { flex-direction: row; align-items: center; gap: 24px; }
