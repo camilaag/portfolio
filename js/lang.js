@@ -118,7 +118,7 @@
 
       /* ── Hero ── */
       'hero.tagline': 'I build scalable digital products that bridge <strong>business vision</strong> and <strong>technical depth</strong>. Driven by data, ownership, and teamwork.',
-      'hero.intent':  'Always open to great conversations.',
+      'hero.intent':  'Don\'t be a stranger.',
       'hero.stat.years':   'Years as PM',
       'hero.stat.users':   'Users impacted',
       'hero.stat.current': 'Current',
