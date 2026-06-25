@@ -1,6 +1,6 @@
 # Camila Araujo Gomes
 
-> Senior Product Manager com background em engenharia de software. Especialista em produtos B2B, marketplaces e dados. Ex-iFood, Grupo Boticário, Cogna Educação. Atualmente na levva, embedded na B3.
+> Senior Product Manager com background em engenharia de software. Especialista em produtos B2B, marketplaces e dados. Ex-iFood, Grupo Boticário, Cogna Educação. Atualmente na levva, consultora na B3.
 
 ## Quem é
 
@@ -11,7 +11,7 @@ Camila Araujo Gomes é Senior Product Manager com mais de 5 anos de experiência
 - **levva @ B3** (Abril 2026 – Presente): Product Manager Senior. Estratégia de canais digitais para o maior mercado financeiro da América Latina, em ambiente altamente regulado.
 - **Grupo Boticário** (Set 2024 – Abr 2026): Product Manager Especialista. GDEM — plataforma de gestão de demanda com modelos estatísticos para +5.000 SKUs das marcas Boticário e Eudora. Redução de 50% nos incidentes de dados, ciclo de planejamento de 40 para 20 dias, acurácia de previsão em 70%.
 - **iFood** (Jan 2020 – Mai 2024): PM Junior → Pleno → Senior em 4 anos e 5 meses. Portal do Parceiro: CSAT 52→79 em 5 meses com pesquisa qualitativa, benchmarks e linguagem acessível para 350 mil restaurantes. iFood Shop Checkout: conversão de 5,6%→17% no app, GMV de 400k→1MM. Logística como Serviço: expansão da base de fornecedores sem frota própria.
-- **Cogna Educação** (Jan 2017 – Dez 2019): Desenvolvedora Jr. Trilha do Enem (250k+ usuários), Plataforma de Provas para professores do ecossistema Kroton.
+- **Cogna Educação** (Jan 2017 – Dez 2019): Desenvolvedora. Trilha do Enem (250k+ usuários), Plataforma de Provas para professores do ecossistema Kroton.
 - **CNPq** (Dez 2015 – Dez 2016): Iniciação científica em reconhecimento de imagens com redes neurais convolucionais (Python, Keras). Modelo integrado a aplicativo Android e iOS.
 
 ## Como trabalha
