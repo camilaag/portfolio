@@ -940,6 +940,24 @@ a { color: inherit; text-decoration: none; }
 .hero-about   { animation: fadeInUp .45s ease .55s both; }
 
 /* =========================================
+   LANG TOGGLE
+========================================= */
+.lang-toggle {
+  display: flex; align-items: center; gap: 4px;
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  padding: 4px 6px; border-radius: var(--r-sm);
+  flex-shrink: 0;
+}
+.lang-option { color: var(--muted); transition: color .15s; }
+.lang-sep { color: var(--hairline); user-select: none; }
+.lang-toggle[data-active="pt"] .lang-option[data-lang="pt"],
+.lang-toggle[data-active="en"] .lang-option[data-lang="en"] {
+  color: var(--ink); font-weight: 700;
+}
+.lang-option:hover { color: var(--ink); }
+
+/* =========================================
    HAMBURGER MENU
 ========================================= */
 .nav-hamburger {
