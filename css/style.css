@@ -1009,7 +1009,7 @@ a { color: inherit; text-decoration: none; }
   .exp-card-bold:hover .exp-link-label { max-width: 120px; opacity: 1; }
   .exp-card-bold:hover .exp-link { gap: 6px; }
   .exp-highlights li { font-size: 16px; }
-  .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: center; }
   .exp-card-arc-step { font-size: 11px; padding: 3px 10px; }
   .exp-badge { font-size: 12px; padding: 5px 14px; }
   .edu-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -1200,39 +1200,36 @@ a { color: inherit; text-decoration: none; }
 /* =========================================
    FAQ
 ========================================= */
-.faq-layout {
-  display: flex; flex-direction: column; gap: 32px;
+.faq-grid {
+  display: flex; flex-direction: column; gap: 40px;
 }
-.faq-sidebar-title {
+.faq-main-title {
   font-size: clamp(28px, 4vw, 40px); font-weight: 600;
   color: var(--ink); letter-spacing: -1px; line-height: 1.1; margin-top: 8px;
 }
-.faq-list { display: flex; flex-direction: column; }
+.faq-col-list { list-style: none; }
 
-.faq-item {
-  border-bottom: 1px solid var(--hairline);
-}
-.faq-item:first-child { border-top: 1px solid var(--hairline); }
+.faq-row { border-bottom: 1px solid var(--hairline); }
+.faq-row:first-child { border-top: 1px solid var(--hairline); }
 
-.faq-question {
+.faq-details { width: 100%; }
+.faq-summary {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 22px 0;
-  font-size: 16px; font-weight: 600; color: var(--ink);
-  cursor: pointer; list-style: none; gap: 16px;
+  padding: 20px 0; gap: 24px;
+  cursor: pointer; list-style: none;
 }
-.faq-question::-webkit-details-marker { display: none; }
-.faq-question::after {
-  content: '+';
-  font-size: 20px; font-weight: 400; color: var(--muted-soft);
-  flex-shrink: 0; transition: transform .2s;
+.faq-summary::-webkit-details-marker { display: none; }
+
+.faq-q {
+  font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.4;
 }
-details[open] .faq-question::after {
-  transform: rotate(45deg);
+.faq-tag {
+  font-size: 13px; color: var(--muted); white-space: nowrap; flex-shrink: 0;
 }
 
 .faq-answer {
   font-size: 15px; color: var(--body); line-height: 1.7;
-  padding-bottom: 22px; max-width: 640px;
+  padding: 0 0 20px; max-width: 560px;
 }
 .faq-answer a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 .faq-answer a:hover { color: var(--muted); }
