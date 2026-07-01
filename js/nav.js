@@ -24,6 +24,7 @@
             '<li><a href="' + base + 'pages/early-career.html"><span data-i18n="nav.exp.early">Engenharia &amp; Pesquisa</span></a></li>' +
           '</ul>' +
         '</li>' +
+        '<li><a href="' + homePrefix + '#projetos"><span data-i18n="nav.projects">Projetos</span></a></li>' +
         '<li><a href="' + homePrefix + '#depoimentos"><span data-i18n="nav.testimonials">Depoimentos</span></a></li>' +
         '<li><a href="' + homePrefix + '#formacao"><span data-i18n="nav.edu">Formação</span></a></li>' +
         '<li><a href="' + homePrefix + '#faq"><span data-i18n="nav.faq">FAQ</span></a></li>' +

@@ -9,6 +9,7 @@
       'nav.exp.bot':      'Grupo Boticário',
       'nav.exp.ifood':    'iFood',
       'nav.exp.early':    'Engenharia & Pesquisa',
+      'nav.projects':     'Projetos',
       'nav.testimonials': 'Depoimentos',
       'nav.edu':          'Formação',
       'nav.faq':          'FAQ',
@@ -66,6 +67,17 @@
       'exp.early.tag1': 'Edtech', 'exp.early.tag2': 'Eng. de Software', 'exp.early.tag3': 'Pesquisa', 'exp.early.tag4': 'Dados',
 
       /* ── Testimonials ── */
+      /* ── Personal projects ── */
+      'proj.label':    'Projetos',
+      'proj.title':    'Projetos pessoais',
+      'proj.subtitle': 'Coisas que construí por iniciativa própria — com IA, curiosidade e vontade de resolver problemas reais.',
+      'proj.deufit.desc': 'Plataforma que gera match entre candidato e vaga — com score de compatibilidade, dicas de negociação de salário e dados de layoff.',
+      'proj.fresh.desc':  'Newsletter de carreira em tech — minhas experiências, aprendizados e perspectivas de quem está dentro do mercado.',
+      'proj.pill.vibecoded': 'Vibe-coded',
+      'proj.pill.ai':        'IA aplicada',
+      'proj.pill.newsletter':'Newsletter',
+      'proj.pill.career':    'Carreira em tech',
+
       'testimonials.label': 'Depoimentos',
       'testimonials.title': 'Quem trabalhou junto',
 
@@ -352,6 +364,7 @@
       'nav.exp.bot':      'Grupo Boticário',
       'nav.exp.ifood':    'iFood',
       'nav.exp.early':    'Engineering & Research',
+      'nav.projects':     'Projects',
       'nav.testimonials': 'Testimonials',
       'nav.edu':          'Education',
       'nav.faq':          'FAQ',
@@ -407,6 +420,17 @@
       'exp.early.hi1':    '+250k students reached through Trilha do Enem (Cogna)',
       'exp.early.hi2':    'Neural network research for image recognition (CNPq)',
       'exp.early.tag1': 'Edtech', 'exp.early.tag2': 'Software Eng.', 'exp.early.tag3': 'Research', 'exp.early.tag4': 'Data',
+
+      /* ── Personal projects ── */
+      'proj.label':    'Projects',
+      'proj.title':    'Personal projects',
+      'proj.subtitle': 'Things I built on my own initiative — with AI, curiosity, and a drive to solve real problems.',
+      'proj.deufit.desc': 'Platform that matches candidates to job openings — with a compatibility score, salary negotiation tips, and layoff data.',
+      'proj.fresh.desc':  'Career newsletter in tech — my experiences, lessons learned, and perspectives from inside the industry.',
+      'proj.pill.vibecoded': 'Vibe-coded',
+      'proj.pill.ai':        'Applied AI',
+      'proj.pill.newsletter':'Newsletter',
+      'proj.pill.career':    'Tech careers',
 
       /* ── Testimonials ── */
       'testimonials.label': 'Testimonials',

@@ -1304,6 +1304,64 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* =========================================
+   PERSONAL PROJECTS
+========================================= */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.proj-card {
+  display: flex; flex-direction: column;
+  background: var(--surface-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-xl);
+  padding: 28px;
+  text-decoration: none; color: inherit;
+  transition: transform .2s, box-shadow .2s;
+}
+.proj-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+.proj-card-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.proj-card-icon {
+  width: 44px; height: 44px; border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+}
+.proj-card-icon .material-symbols-outlined { font-size: 22px; color: var(--ink); }
+.proj-card-arrow {
+  font-size: 20px; color: var(--muted);
+  transition: color .15s, transform .15s;
+}
+.proj-card:hover .proj-card-arrow { color: var(--ink); transform: translate(2px,-2px); }
+.proj-card-name {
+  font-size: 20px; font-weight: 600; color: var(--ink);
+  letter-spacing: -0.4px; margin-bottom: 8px;
+}
+.proj-card-desc {
+  font-size: 14px; color: var(--muted); line-height: 1.6;
+  flex: 1; margin-bottom: 20px;
+}
+.proj-card-pills {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.proj-pill {
+  font-size: 12px; font-weight: 500; color: var(--body);
+  background: var(--surface-card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-pill);
+  padding: 3px 10px;
+}
+
+@media (min-width: 640px) {
+  .proj-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* =========================================
    MATERIAL SYMBOLS
 ========================================= */
 .material-symbols-outlined {
