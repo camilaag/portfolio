@@ -789,10 +789,16 @@ a { color: inherit; text-decoration: none; }
 .phase-chip--blue::before { background: #002c63; }
 
 /* Section blocks */
-.ifood-section { padding: 56px 0; border-bottom: 1px solid var(--hairline); }
-.ifood-section-alt { background: var(--surface-soft); }
-.ifood-section:last-of-type { border-bottom: none; }
-.ifood-section-inner { max-width: var(--max-w); margin: 0 auto; }
+.ifood-section { padding: 10px 0; }
+.ifood-section > .container {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 48px 32px;
+  overflow: hidden;
+}
+.ifood-section-alt > .container { background: var(--surface-soft); border-color: transparent; }
+.ifood-section-inner { width: 100%; }
 
 .ifood-section-title {
   font-size: clamp(28px, 3.5vw, 44px);
@@ -801,7 +807,7 @@ a { color: inherit; text-decoration: none; }
 }
 .ifood-section-body {
   font-size: 16px; color: var(--body); line-height: 1.75;
-  max-width: 640px; margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 .ifood-section-body strong { color: var(--body-strong); font-weight: 600; }
 .ifood-section-body a { color: #c41020; text-decoration: underline; }
@@ -1116,7 +1122,7 @@ a { color: inherit; text-decoration: none; }
   .career-arc-gap { width: 32px; }
   .journey-outcome-item { min-width: 160px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: none; }
   .journey-outcome-item:last-child { border-right: none; }
-  .ifood-section { padding: 80px 0; }
+  .ifood-section > .container { padding: 56px 48px; }
   .section > .container { padding: 56px 48px; }
   #sobre > .container, #depoimentos > .container, #faq > .container { padding: 64px 56px; }
 }
@@ -1163,6 +1169,81 @@ a { color: inherit; text-decoration: none; }
 .feature-card-icon { font-size: 20px; margin-bottom: 10px; }
 .feature-card-title { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 4px; }
 .feature-card-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* Horizontal release timeline */
+.release-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 36px;
+}
+.release-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.release-status-chip {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase;
+  border-radius: 20px; padding: 4px 12px; margin-bottom: 4px;
+}
+.release-item--done   .release-status-chip { background: #002c63; color: #fff; }
+.release-item--active .release-status-chip { background: rgba(0,44,99,.12); color: #002c63; }
+.release-item--planned .release-status-chip { background: var(--hairline); color: var(--muted); }
+.release-node { display: none; }
+.release-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.release-item--done   .release-dot { background: #002c63; }
+.release-item--active .release-dot {
+  background: #fff; border: 2.5px solid #002c63;
+  box-shadow: 0 0 0 4px rgba(0,44,99,.15);
+}
+.release-item--planned .release-dot { background: #c8c8c8; }
+.release-title {
+  font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.3;
+}
+.release-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+@media (min-width: 720px) {
+  .release-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .release-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers chip and dot in column */
+    gap: 0;
+    padding: 0 12px;
+  }
+  .release-status-chip {
+    align-self: auto; /* centered by parent align-items */
+    margin-bottom: 14px;
+  }
+  .release-node {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+  }
+  /* Dot centers are at col centers: 1/6, 3/6, 5/6 of total width.
+     top = chip (~22px) + margin-bottom (14px) + half-dot (7px) = 43px */
+  .release-timeline::before {
+    content: '';
+    position: absolute;
+    top: 43px;
+    left: calc(100% / 6);
+    right: calc(100% / 6);
+    height: 2px;
+    background: linear-gradient(to right, #002c63 50%, rgba(0,44,99,.22) 50%);
+    z-index: 0;
+  }
+  .release-title { width: 100%; text-align: left; font-size: 13px; margin-bottom: 4px; }
+  .release-desc  { width: 100%; text-align: left; font-size: 12px; }
+}
 
 /* Insight callout block */
 .insight-block {
